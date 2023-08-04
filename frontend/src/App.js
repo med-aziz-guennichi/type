@@ -5,11 +5,10 @@ import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
 import Menu from "./layout/Menu";
 import Navbar from "./layout/Navbar";
-import ChangePassword from "./components/ChangePassword";
 import Adduser from "./components/Adduser";
 import NavRigas from "./layout/NavRigas";
 import Runtest from "./components/Runtest";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -31,10 +30,11 @@ function App() {
         />
         <Route path="/change" element={<NavRigas />} />
         <Route path="/adduser" element={<NavRigas child={<Adduser />} />} />
-         <Route path="/menu" element={<NavRigas child={ <Menu/>} />} />
-         <Route
-  path="/accueil"
-  element={<NavRigas child={<Menu child={<Runtest />} />} />}/>
+        <Route path="/menu" element={<NavRigas child={<Menu />} />} />
+        <Route
+          path="/accueil"
+          element={<NavRigas child={<Menu child={<Runtest />} />} />}
+        />
       </Routes>
       <ToastContainer theme="colored" position="top-center" />
     </>

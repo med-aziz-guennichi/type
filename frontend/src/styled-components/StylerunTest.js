@@ -8,6 +8,8 @@ display: flex;
 color: #ffff;
 flex-direction: column;
 justify-content: space-around;
+flex: auto;
+
 `;
 export const Container1 = styled.div`
 border: 1px solid #3139A5;
@@ -17,6 +19,8 @@ border-color:#1643F4 ;
 margin-left:7%;
 margin-right:7%;
 padding: 8px;
+flex: auto;
+
 `;
 
 export const Card1Container1 = styled.div`
@@ -25,6 +29,8 @@ display: flex;
 width: 80%;
 justify-content: space-between;
 flex-direction: column;
+flex: auto;
+
 
 `;
 export const InnerContainer1=styled.div`
@@ -33,6 +39,8 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 padding: 7px;
+flex: auto;
+
 `
 export const MenuCard1 = styled.nav`
 flex-direction: row;
@@ -44,6 +52,8 @@ align-items: center;
 margin-bottom: 8px;
 padding: 6px;
 justify-content: space-between;
+flex: auto;
+
 
 `;
 export const Card1 = styled.div`
@@ -52,11 +62,15 @@ display: flex;
 padding: 7px;
 flex-direction: row;
 justify-content: space-between;
+flex: auto;
+
 `;
 export const InnerDiv1Card1 = styled.div`
 background-color: #3139A5;
 display: flex;
 flex-direction: column;
+flex: auto;
+
 `;
 
 export const InnerDiv2Card1 = styled.div`
@@ -65,13 +79,18 @@ display: flex;
 justify-content: space-between;
 flex-direction: column;
 align-items: center;
+flex: auto;
+
 
 `;
 export const InnerButton=styled.div`
+margin-top: 5%;
 background-color: #3139A5;
 justify-content: space-between;
 display: flex;
 flex-direction: row;
+flex: auto;
+
  /* Add margins between components */
  & > * {
     margin-right: 10px; /* Adjust the margin value as per your preference */
@@ -92,21 +111,28 @@ export const InnerDiv3Card1 = styled.div`
   align-items: center;
   padding: 10px;
   margin-right: 7%;
+  flex: auto;
+
 `;
 
 export const Step=styled.div`
 border-color: #ffff;
 width: 20%;
-height: 220px;
+max-height: 220px;
 display: flex;
 border: 2px solid #D0D3F9;
 flex-direction: column;
+align-items: center;
+flex: auto;
+overflow: auto; 
 
 `
 export const Text =styled.p`
 font-size: 16px;
 font-family: 'Poppins', sans-serif; 
 color: #ffff;
+flex: auto;
+
 `
 export const StyledSelect = styled.select`
   font-size: 14px;
@@ -114,6 +140,8 @@ export const StyledSelect = styled.select`
   border-radius: 4px;
   outline: none;
   font-family: 'Signika Negative', sans-serif;
+  flex: auto;
+
 
   /* Customize other styles as needed */
 `;
@@ -121,30 +149,35 @@ export const Label=styled.input`
 background-color: #ffff;
 color: black;
 width: auto;
-
 height: 20px;
   text-align: center;
   font-family: 'Signika Negative', sans-serif;
+  flex: auto;
+
 `
 export const LabelMac=styled.input`
 background-color: #ffff;
-width: 200px;
+width: 10%;
 color: black;
 height: 20px;
   text-align: center;
   font-family: 'Signika Negative', sans-serif;
+  flex: auto;
+
 `
 export const LabelModel=styled.input`
 background-color: #ffff;
-width: 100px;
+width: 5%;
 color: black;
 height: 20px;
   text-align: center;
   font-family: 'Signika Negative', sans-serif;
+  flex: auto;
+
 `
 export const LabelSerial=styled.input`
 background-color: #ffff;
-width: 150px;
+width: 7.5%;
 color: black;
 height: 20px;
   text-align: center;
@@ -154,6 +187,7 @@ export const Button=styled.button`
 background-color:#0A122F ;
 color: #ffff;
 border-radius: 4px;
+max-height: 30px;
 font-family: 'Signika Negative', sans-serif;
 `
 export const ButtonRun=styled.button`
@@ -183,6 +217,8 @@ font-family: 'Signika Negative', sans-serif;
   background-color: #1643F4;
   `
 export const Card2Container1 = styled.div`
+  flex: auto;
+
   /* Styles for Card2Container1 */
 `;
 
@@ -192,6 +228,8 @@ display:flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-evenly;
+flex: auto;
+
 
 `;
 
@@ -203,6 +241,8 @@ display:flex;
 flex-direction: column;
 background-color: #3139A5;
 padding: 10px;
+flex: auto;
+
 
 `
 export const ElectricInner1=styled.div`
@@ -211,6 +251,8 @@ display:flex;
 flex-direction: row;
 background-color: #14647C;
 justify-content: space-around;
+flex: auto;
+
 `
 export const ElectricInner2=styled.div`
 display:flex;
@@ -218,6 +260,8 @@ flex-direction: row;
 background-color: #14647C;
 justify-content: space-around;
 padding: 10px;
+flex: auto;
+
 
 `
 export const Container2 = styled.div`
@@ -228,6 +272,8 @@ justify-content: space-between;
 background-color: #ffff;
 border-color:#1643F4 ;
 padding : 8px;
+flex: auto;
+
 `;
 
 export const progressAnimation = keyframes`
@@ -248,18 +294,22 @@ export const progressAnimation1 = keyframes`
 `;
 export const ProgressBarContainer1 = styled.div`
   height: 20px;
-  width: 350px; /* Set the desired width for the progress bar container */
+  width: 200%; /* Set the desired width for the progress bar container */
   background-color: #f2f2f2;
   border-radius: 4px;
+  flex: auto;
+
 `;
 
 export const ProgressBar1 = styled.div`
   height: 100%;
   width: 100%; /* Make sure the progress bar always fills the container */
-  max-width: 350px; /* Set the maximum width to 350px to round the width */
+  max-width: 200%; /* Set the maximum width to 350px to round the width */
   background-color: green;
   border-radius: 4px;
   animation: ${progressAnimation} 2s ease-in-out;
+  flex: auto;
+
 `;
 
 export const ProgressBarContainer = styled.div`
@@ -267,6 +317,8 @@ export const ProgressBarContainer = styled.div`
   height: 20px;
   background-color: #f2f2f2;
   border-radius: 4px;
+  flex: auto;
+
 `;
 
 export const ProgressBar = styled.div`
@@ -276,6 +328,8 @@ export const ProgressBar = styled.div`
   background-color: green;
   border-radius: 4px;
   animation: ${progressAnimation} 6s ease-in-out;
+  flex: auto;
+
 `;
 export const InnerDivElect =styled.div`
 background-color: #CED7D9;
@@ -284,12 +338,16 @@ background-color: #CED7D9;
   height: 70px;
   justify-content: center;
   align-items: center;
+  flex: auto;
+
 `
 export const DivVolt=styled.div`
 background-color: #CED7D9;
   border-radius: 4px;
   justify-content: center;
   width: auto;
+  flex: auto;
+
 `
 export const MainDiv = styled.div`
 background-color: #CED7D9;
@@ -302,6 +360,8 @@ background-color: #CED7D9;
   position: relative;
   color: #2541B0;
   font-size:large;
+  flex: auto;
+
 
 `;
 
@@ -314,6 +374,8 @@ export const SubDiv = styled.div`
   top: -10px;
   z-index: 99;
   font-size: medium;
+  flex: auto;
+
 `;
 
 export const DivVerifier = styled.div`
@@ -326,8 +388,10 @@ border-color:#1643F4 ;
 padding: 8px;
 justify-content: center;
 align-items: center;
-`;
+margin-top: 1.5%;
+flex: auto;
 
+`;
 export const TextInsideBorder = styled.span`
   position: absolute;
   top: -20px;
@@ -336,6 +400,7 @@ export const TextInsideBorder = styled.span`
   background-color: #fff;
   color: #14185A;
   font-family: 'Signika Negative', sans-serif;
+
 `;
 
 export const CardButton = styled.div`
@@ -343,10 +408,12 @@ export const CardButton = styled.div`
   flex-direction: row;
   padding: 7px;
   justify-content:space-around ;
+  flex: auto;
+
 `;
 
 export const TextVerif = styled.p`
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Signika Negative', sans-serif;
   color: blue;
   justify-self: center;
@@ -394,6 +461,8 @@ export const ModalContainer = styled.div`
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  flex: auto;
+
 `;
 export const Run=styled(FiPlay)`
 align-self: center;
@@ -405,6 +474,9 @@ export const divTextProg=styled.div`
 display: flex;
 direction: column;
 justify-content: space-evenly;
+width: auto;
+flex: auto;
+
 `;
 export const LabelEta = styled.input`
   width: 150px;
@@ -423,4 +495,32 @@ width: 80%;
 align-items: center;
 padding: 19px;
 border-radius: 5px;
+flex: auto;
+
+`;
+export const TableWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex: auto;
+
+`;
+
+export const Table = styled.table`
+  border-collapse: collapse;
+  width: 100%;
+ 
+`;
+
+export const Tr = styled.tr`
+background-color: ${(props) => (props.active ? '#244FDB' : 'inherit')};
+`;
+
+export const Td = styled.td`
+
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color:black;
+  width: 50%;
 `;

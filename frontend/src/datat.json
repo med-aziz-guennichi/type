@@ -1,0 +1,56 @@
+{
+    "Testes": [
+      {
+        "name": "test1",
+        "description": "Vérification de l'état de la carte et de l'alimentation de la LED verte !",
+        "Checked": true
+      },
+      {
+        "name": "test2",
+        "description": "Vérifier si la LED bleue clignote lentement ou NON !",
+        "Checked": true
+      },
+      {
+        "name": "test3",
+        "description": "Vérifier si la vitesse de clignotement de la LED bleue a changé !",
+        "Checked": true
+      },
+      {
+        "name": "test4",
+        "description": "Vérifier que les champs MAC, numéro de série et modèle contiennent des valeurs.",
+        "Checked": true
+      },
+      {
+        "name": "test5",
+        "description": "Vérifier que les champs MAC, numéro de série et modèle contiennent des valeurs.",
+        "Checked": true
+      }
+      ,
+      {
+        "name": "test2",
+        "description": "Vérifier si la LED bleue clignote lentement ou NON !",
+        "Checked": true
+      },
+      {
+        "name": "test2",
+        "description": "Vérifier si la LED bleue clignote lentement ou NON !",
+        "Checked": true
+      },
+      {
+        "name": "test2",
+        "description": "Vérifier si la LED bleue clignote lentement ou NON !",
+        "Checked": true
+      },
+      {
+        "name": "test2",
+        "description": "Vérifier si la LED bleue clignote lentement ou NON !",
+        "Checked": true
+      },
+      {
+        "name": "test2",
+        "description": "Vérifier si la LED bleue clignote lentement ou NON !",
+        "Checked": true
+      }
+    ]
+  }
+  
