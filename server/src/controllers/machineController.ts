@@ -22,11 +22,15 @@ interface machine {
   batterycurrent?: string;
   testStatus?: string[];
 }
-export const createMachine = async (
-  req: Request<unknown, unknown, machine>,
-  res: Response,
-  next: NextFunction
-) => {
+/**
+ * @description create a new Machine
+ * @author Med Aziz Guennichi
+ * @param req {object}
+ * @param res {object}
+ * @param next {function}
+ * @returns {object}
+ */
+export const createMachine = async (req: Request<unknown, unknown, machine>,res: Response,next: NextFunction) => {
   try {
     const {
       serialNumber,
@@ -91,46 +95,66 @@ export const createMachine = async (
     res.status(500).json({ message: error });
   }
 };
-export const getAllMachine = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+/**
+ * @description Get All machine
+ * @author Med Aziz Guennichi
+ * @param req {object}
+ * @param res {object}
+ * @param next {Function}
+ * @returns {object}
+ */
+export const getAllMachine = async (req: Request,res: Response,next: NextFunction) => {
   try {
+    // find all machine from the Machine Model
     const machine = await Machine.find({});
+    // return all machine
     res.status(200).json(machine);
   } catch (error: any) {
+    // handle errors
     Logging.error(error.message);
     res.status(500).json({ message: error });
   }
 };
-
-export const getMachineById = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+/**
+ * @description get Machine with her id
+ * @author Med Aziz Guennichi
+ * @param req {object}
+ * @param res {object}
+ * @param next {function}
+ * @returns {object}
+ */
+export const getMachineById = async (req: Request,res: Response,next: NextFunction) => {
   try {
+    // give the machine id in the Request Params
     const { machineId } = req.params;
+    // find the machine with her id
     const machine = await Machine.findById(machineId);
+    // if the machine dosent exist retutn 404 status code
     if (!machine) {
       Logging.error("Machine not found");
       return res.status(404).json({ message: "Machine not found" });
     }
+    // return the machine
     res.status(200).json(machine);
   } catch (error: any) {
+    // handle errors
     Logging.error(error.message);
     res.status(500).json({ message: error });
   }
 };
-
-export const updateMachine = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+/**
+ * @description Update the machine with her id
+ * @author Med Aziz Guennichi
+ * @param req {object}
+ * @param res {object}
+ * @param next {function}
+ * @returns {object}
+ */
+export const updateMachine = async (req: Request,res: Response,next: NextFunction) => {
   try {
+    // give the machine id in the Request Params
     const { machineId } = req.params;
+    // find the machine with her id and update all the req.body
     const machine = await Machine.findByIdAndUpdate(
       machineId,
       {
@@ -138,32 +162,44 @@ export const updateMachine = async (
       },
       { new: true }
     );
+    // if he didint find the machine return the 404 error
     if (!machine) {
       Logging.error("Machine not found");
       return res.status(404).json({ message: "Machine not found" });
     }
+    // return success message with machine data
     res.status(200).json({ message: "Machine updated successfully", machine });
   } catch (error: any) {
+    // handle errors
     Logging.error(error.message);
     res.status(500).json({ message: error });
   }
 };
-
-export const deleteMachine = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+/**
+ * @description Delete the machine with her id
+ * @author Med Aziz Guennichi
+ * @param req {object}
+ * @param res {object}
+ * @param next {function}
+ * @returns {object}
+ */
+export const deleteMachine = async (req: Request,res: Response,next: NextFunction) => {
   try {
+    // give the machine id in the Request Params
     const { machineId } = req.params;
+    // find the machine with her id
     const machine = await Machine.findById(machineId);
+    // if he didint find the machine return 404 error
     if (!machine) {
       Logging.error("Machine not found");
       return res.status(404).json({ message: "Machine not found" });
     }
+    // delete the machine
     await machine.deleteOne();
+    // return success message
     res.status(200).json({ message: "Machine deleted succeessfully" });
   } catch (error: any) {
+    // handle errors
     Logging.error(error.message);
     res.status(500).json({ message: error });
   }

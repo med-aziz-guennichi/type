@@ -33,11 +33,7 @@ interface UpdatePasswordBody {
  * @param next {function}
  * @returns {object}
  */
-export const createUser = async (
-  req: Request<unknown, unknown, CreateUser>,
-  res: Response,
-  next: NextFunction
-) => {
+export const createUser = async (req: Request<unknown, unknown, CreateUser>,res: Response,next: NextFunction) => {
   try {
     const { firstName, lastName, email, role } = req.body;
 
@@ -108,11 +104,7 @@ export const createUser = async (
  * @param next {function}
  * @returns {object}
  */
-export const getAllUsers = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-): Promise<void> => {
+export const getAllUsers = async (req: Request,res: Response,next: NextFunction): Promise<void> => {
   try {
     // Find all users
     const users = await User.find({});
@@ -132,11 +124,7 @@ export const getAllUsers = async (
  * @param next {function}
  * @returns {object}
  */
-export const getUserById = async (
-  req: Request<{ userId: string }>,
-  res: Response<any | { message: string }>,
-  next: NextFunction
-) => {
+export const getUserById = async (req: Request<{ userId: string }>,res: Response<any | { message: string }>,next: NextFunction) => {
   const { userId } = req.params;
   try {
     // Find user by ID
@@ -161,11 +149,7 @@ export const getUserById = async (
  * @param next {function}
  * @returns {object}
  */
-export const updateUser = async (
-  req: Request<{ userId: string }>,
-  res: Response,
-  next: NextFunction
-) => {
+export const updateUser = async (req: Request<{ userId: string }>,res: Response,next: NextFunction) => {
   // Get the user ID from request parameters
   const { userId } = req.params;
   try {
@@ -201,10 +185,7 @@ export const updateUser = async (
  * @param next {function}
  * @returns {object}
  */
-export const deleteUser = async (
-  req: Request<{ userId: string }>,
-  res: Response<{ message: string }> | Response<{ message: string }>
-) => {
+export const deleteUser = async (req: Request<{ userId: string }>,res: Response<{ message: string }> | Response<{ message: string }>) => {
   // Get the user ID from request parameters
   const { userId } = req.params;
   try {
@@ -231,11 +212,7 @@ export const deleteUser = async (
  * @param next {function}
  * @returns {object}
  */
-export const updateUserPassword = async (
-  req: Request<{ userId: string }, {}, UpdatePasswordBody>,
-  res: Response<{ message: string }>,
-  next: NextFunction
-) => {
+export const updateUserPassword = async (req: Request<{ userId: string }, {}, UpdatePasswordBody>,res: Response<{ message: string }>,next: NextFunction) => {
   // Extracting userId, currentPassword, and newPassword from request parameters and body
   const { userId } = req.params;
   const { currentPassword, newPassword } = req.body;
@@ -289,11 +266,7 @@ export const updateUserPassword = async (
  * @param next {function}
  * @returns {object}
  */
-export const updateUserPasswordWithAdmin = async (
-  req: Request<{ userId: string }, {}, UpdatePasswordWithAdminBody>,
-  res: Response<{ message: string }>,
-  next: NextFunction
-) => {
+export const updateUserPasswordWithAdmin = async (req: Request<{ userId: string }, {}, UpdatePasswordWithAdminBody>,res: Response<{ message: string }>,next: NextFunction) => {
   const { userId } = req.params;
   try {
     // Check if userId is a valid ObjectId

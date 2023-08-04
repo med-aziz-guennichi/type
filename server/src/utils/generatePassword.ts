@@ -4,6 +4,7 @@ import generator from "generate-password"
 /**
  * Generates a random password of length between minLength and maxLength,
  * and returns the hashed and plain versions of the password.
+ * @author Med Aziz GUennichi
  * @param {number} minLength - The minimum length of the password.
  * @param {number} maxLength - The maximum length of the password.
  * @returns {Promise<{hashedPassword: string, plainPassword: string}>} An object containing the hashed and plain versions of the password.

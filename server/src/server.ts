@@ -34,7 +34,7 @@ const StartServer = () => {
         );
       } else {
         Logging.error(
-          `Result - METHOD: [${req.method}] - URL: [${req.url}] - IP: [${req.socket.remoteAddress}] - STATUS: [${res.statusCode}]`
+          `Result - METHOD: [${req.method}] - URL: [${req.url}] - IP: [${req.socket.remoteAddress}] - STATUS: [${res.statusCode}] - MESSAGE: [${res.statusMessage}]`
         );
       }
     });

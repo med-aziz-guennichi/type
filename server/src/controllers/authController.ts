@@ -20,12 +20,7 @@ interface LoginBody {
  * @param next {function}
  * @returns {object}
  */
-export const login: RequestHandler<
-  unknown,
-  unknown,
-  LoginBody,
-  unknown
-> = async (req, res, next) => {
+export const login: RequestHandler<unknown,unknown,LoginBody,unknown> = async (req, res, next) => {
   try {
     const { email, password } = req.body as LoginBody;
     // if password === undefined || email === undefined return bad request response
@@ -80,11 +75,7 @@ interface ResetPasswordBody {
  * @param res {object}
  * @param next {function}
  */
-export const resetPassword = async (
-  req: Request<unknown, unknown, ResetPasswordBody>,
-  res: Response,
-  next: NextFunction
-) => {
+export const resetPassword = async (req: Request<unknown, unknown, ResetPasswordBody>,res: Response,next: NextFunction) => {
   try {
     const { email } = req.body;
     // find the user with email
@@ -172,15 +163,7 @@ interface NewPasswordData {
  * @param res {object}
  * @param next {function}
  */
-export const updatePasswordByLinkVerification = async (
-  req: Request<
-    unknown,
-    unknown,
-    { activation_token: string; password: string }
-  >,
-  res: Response,
-  next: NextFunction
-) => {
+export const updatePasswordByLinkVerification = async (req: Request<unknown,unknown,{ activation_token: string; password: string }>,res: Response, next: NextFunction) => {
   try {
     const { activation_token, password } = req.body;
 
